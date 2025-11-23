@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Grand Hotel - Welcome</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+
+
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">The Grand</h1>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#rooms">Rooms</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button id="login-btn" class="btn">Sign In</button>
+                <button id="register-btn" class="btn btn-primary">Register</button>
+                <div id="user-info" class="hidden">
+                    <span id="welcome-msg"></span>
+                    <button id="logout-btn" class="btn btn-primary">Logout</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1>Experience Unforgettable Luxury</h1>
+            <p>Book your stay at the world's most prestigious hotel.</p>
+            <a href="#rooms" class="btn btn-primary">View Our Rooms</a>
+        </div>
+    </header>
+    
+
+
+
+<section id="rooms" class="container content-section">
+  <h2>Our Rooms</h2>
+  <p>Choose from our comfortable and stylish rooms designed for your perfect stay.</p>
+
+  <div class="rooms-container">
+    <div class="room-card">
+      <img src="pic/img3.jpg" alt="Deluxe Room">
+      <h3>Deluxe Room</h3>
+      <p>Spacious room with a king-size bed, free Wi-Fi, and mountain view.</p>
+      <p><strong>$120 / night</strong></p>
+      <button class="book-btn">Book Now</button>
+    </div>
+
+    <div class="room-card">
+      <img src="pic/img2.png" alt="Suite Room">
+      <h3>Suite Room</h3>
+      <p>Luxurious suite with living area, bathtub, and complimentary breakfast.</p>
+      <p><strong>$180 / night</strong></p>
+      <button class="book-btn">Book Now</button>
+    </div>
+
+
+
+    <div class="room-card">
+      <img src="pic/img4.jpg" alt="Family Room">
+      <h3>Family Room</h3>
+      <p>Perfect for families — two queen beds, large balcony, and cozy decor.</p>
+      <p><strong>$150 / night</strong></p>
+      <button class="book-btn">Book Now</button>
+    </div>
+     <div class="room-card">
+      <img src="pic/launge.jpg" alt="Lounge Area">
+      <h3>Lounge Area</h3>
+      <p>Unwind in our luxurious lounge featuring soft lighting, coffee service, and music.</p>
+      <p><strong>Free Access</strong></p>
+      <button class="book-btn">Explore</button>
+    </div>
+    <div class="room-card">
+      <img src="pic/dining.jpg" alt="Dining Area">
+      <h3>Dining Area</h3>
+      <p>Enjoy delicious meals prepared by top chefs in a warm and welcoming ambiance.</p>
+      <p><strong>Breakfast Included</strong></p>
+      <button class="book-btn">View Menu</button>
+    </div>
+     <div class="room-card">
+      <img src="pic/garden.jpg" alt="Dining Area">
+      <h3>gardening Area</h3>
+      <p>Enjoy the beautiful and peaceful serene through greenery.</p>
+      <p><strong>Book now</strong></p>
+      <button class="book-btn">View Menu</button>
+    </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+    <section id="about" class="container content-section">
+  <h2>About Us</h2>
+  <div class="about-content">
+    <div class="about-text">
+      <p>
+        Welcome to <strong>BlissStay Hotel</strong> — where comfort meets elegance. 
+        Nestled in the heart of the city yet surrounded by nature’s calm, our hotel 
+        offers a perfect blend of modern luxury and warm hospitality. Whether you're 
+        here for business, family vacations, or a romantic getaway, we ensure your 
+        stay is memorable and peaceful.
+      </p>
+
+      <p>
+        Our hotel features <strong>deluxe rooms</strong>, <strong>luxury suites</strong>, and 
+        <strong>family spaces</strong> designed with style and comfort in mind. Enjoy breathtaking 
+        views, world-class dining, 24/7 room service, and personalized experiences curated 
+        just for you.
+      </p>
+
+      <p>
+        At BlissStay, we believe every guest deserves more than just accommodation — 
+        they deserve an experience. That’s why our friendly staff goes above and beyond 
+        to make you feel at home from the moment you arrive.
+      </p>
+
+      <button class="learn-more-btn">Learn More</button>
+    </div>
+
+    <div class="about-image">
+      <img src="pic/about.jpg" alt="About Our Hotel">
+    </div>
+  </div>
+</section>
+
+
+
+
+
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-login">&times;</span>
+            <h2>Sign In</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-username">Username</label>
+                    <input type="text" id="login-username" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+                <p id="login-error" class="error-msg"></p>
+            </form>
+        </div>
+    </div>
+
+
+
+
+    <div id="register-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-register">&times;</span>
+            <h2>Register</h2>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="reg-username">Username</label>
+                    <input type="text" id="reg-username" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-password">Password</label>
+                    <input type="password" id="reg-password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Create Account</button>
+                <p id="register-msg" class="success-msg"></p>
+            </form>
+        </div>
+    </div>
+<section id="contact" class="container content-section">
+  <h2>Our Location</h2>
+  <p>Find us easily with our real-time location map below — we’re always ready to welcome you!</p>
+
+
+
+  <div class="map-wrapper">
+    <div class="map-info">
+      <h3>📍 Grand Hotel</h3>
+      <p>
+        Lakeside Road, Pokhara, Nepal <br>
+        <strong>Phone:</strong> +977 9767238963 <br>
+        <strong>Email:</strong> contact@grandhotel.com
+      </p>
+      <p>Located in a peaceful area with easy access to restaurants, shops, and major attractions.</p>
+      <button class="direction-btn" onclick="window.open('https://maps.google.com?q=BlissStay+Hotel+Pokhara')">
+        Get Directions
+      </button>
+    </div>
+
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3557.2039270487367!2d83.9588306754185!3d28.20728850326448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399595f793f8b041%3A0xa36504254552a884!2sHotel%20Guru%20Grand%20-%20Pokhara-lakeside!5e1!3m2!1sen!2snp!4v1762140819988!5m2!1sen!2snp"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+    <script src="script.js"></script>
+
+<div id="preloader">
+    <div class="loader"></div>
+</div>
+</body>
+</html>
