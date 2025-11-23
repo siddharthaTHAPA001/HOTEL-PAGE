@@ -123,7 +123,6 @@ a {
     font-weight: bold;
 }
 
-
 /* --- Hero Section --- */
 .hero {
     height: 100vh; /* Full screen height */
@@ -334,71 +333,7 @@ a {
   border: none;
 }
 
-
 /* rooms section */
-#rooms {
-  text-align: center;
-  padding: 50px 20px;
-  background: #f9f9f9;
-}
-
-.rooms-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 25px;
-  margin-top: 30px;
-}
-
-.room-card {
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  width: 300px;
-  transition: transform 0.3s ease;
-}
-
-.room-card:hover {
-  transform: translateY(-10px);
-}
-
-.room-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.room-card h3 {
-  margin: 15px 0 5px;
-}
-
-.room-card p {
-  margin: 5px 15px;
-  color: #555;
-}
-.room-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.room-card:hover {
-    transform: translateY(-10px) scale(1.03);
-    box-shadow: 0 20px 30px rgba(0,0,0,0.2);
-}
-.book-btn {
-  background: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  margin: 15px 0 20px;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.book-btn:hover {
-  background: #0056b3;
-}
 #rooms {
   text-align: center;
   padding: 50px 20px;
@@ -458,9 +393,7 @@ a {
   background: #0056b3;
 }
 
-
 /* about section */
-
 #about {
   padding: 60px 20px;
   background: #fff;
@@ -522,26 +455,78 @@ a {
   background: #0056b3;
 }
 
-#preloader {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2000;
+/* --- Mobile Responsive Fixes --- */
+@media (max-width: 768px) {
+    /* Hero */
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    /* Navbar links stack */
+    .navbar .nav-links {
+        flex-direction: column;
+        position: static;
+        display: flex !important;
+        margin-top: 10px;
+    }
+    
+    .navbar .nav-links li {
+        margin: 10px 0;
+    }
+
+    /* Rooms stack */
+    .rooms-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .room-card {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    .room-card img {
+        height: 180px;
+    }
+
+    /* About section stack */
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-text, .about-image {
+        flex: 1 1 100%;
+    }
+    .about-image img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Map stack */
+    .map-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .map-info, .map-container {
+        flex: 1 1 100%;
+    }
+    .map-container iframe {
+        height: 300px;
+    }
+
+    /* Buttons full width */
+    .btn, .book-btn, .learn-more-btn {
+        width: 100%;
+    }
 }
 
-.loader {
-    width: 40px;
-    height: 40px;
-    border: 4px solid #ccc;
-    border-top-color: #3498db;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-    to { transform: rotate(360deg); }
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+    .hero-content p {
+        font-size: 0.9rem;
+    }
 }
